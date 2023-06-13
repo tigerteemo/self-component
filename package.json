@@ -1,5 +1,8 @@
 {
-  "name": "componentlibrary",
+  "name": "@TigerTeemo/self-component",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/TigerTeemo"
+  },
   "version": "1.0.0",
   "description": "component library test",
   "main": "dist/cjs/index.js",
