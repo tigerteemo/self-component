@@ -7,6 +7,11 @@ import Button from './Button';
 
 const meta: Meta<typeof Button> = {
   component: Button,
+  tags: ['autodocs'],
+  argTypes: {
+    label: { control: 'text'},
+    big: { control: 'boolean'}
+  }
 };
 
 export default meta;
@@ -17,6 +22,13 @@ type Story = StoryObj<typeof Button>;
  * See https://storybook.js.org/docs/react/api/csf
  * to learn how to use render functions.
  */
-export const Primary: Story = {
-  render: () => <Button label="Button" big={true}/>,
+export const Big: Story = {
+  render: (args) => <Button {...args} />,
 };
+
+export const Small: Story = {
+  args: {
+    label: "small button",
+    big: false,
+  },
+}
